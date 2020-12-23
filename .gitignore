@@ -131,10 +131,8 @@ dmypy.json
 # Designer Files
 *.ui
 *.qrc
-
-
 *.reg
 
 imgs/
 
-.idea
+.idea/
