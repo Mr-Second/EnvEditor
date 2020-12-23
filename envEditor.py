@@ -1,7 +1,6 @@
 import getpass
 import os
 import socket
-import sys
 
 import icons_rc
 
@@ -429,7 +428,14 @@ class env_editor(QWidget, Ui_Form):
             self.message = msg
 
         dialog.connectWithThis(slotFunc)
+
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(8)
+        font.setWeight(75)
+        dialog.valueLabel.setFont(font)
         dialog.valueLabel.setText("Registry File Save Path:")
+        dialog.valueLabel.setStyleSheet("")
         self.setWindowOpacity(0.5)
         res = dialog.exec_()
         self.setWindowOpacity(1.0)
@@ -443,12 +449,3 @@ class env_editor(QWidget, Ui_Form):
         dialog = InfoDialog(None)
         dialog.exec()
         pass
-
-
-if __name__ == '__main__':
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
-    app = QApplication(sys.argv)
-    editor = env_editor()
-    editor.setApp(app)
-    editor.show()
-    sys.exit(app.exec_())
