@@ -1,0 +1,49 @@
+<RCC>
+  <qresource prefix="/">
+    <file>imgs/back.png</file>
+    <file>imgs/avatar.jpg</file>
+    <file>imgs/info.png</file>
+    <file>imgs/info_hover.png</file>
+    <file>imgs/info_pressed.png</file>
+    <file>imgs/export.png</file>
+    <file>imgs/export_hover.png</file>
+    <file>imgs/export_pressed.png</file>
+    <file>imgs/icon.png</file>
+    <file>imgs/delete_disabled.png</file>
+    <file>imgs/delete_hover.png</file>
+    <file>imgs/delete_pressed.png</file>
+    <file>imgs/cancel.png</file>
+    <file>imgs/cancel_hover.png</file>
+    <file>imgs/cancel_pressed.png</file>
+    <file>imgs/confirm.png</file>
+    <file>imgs/confirm_hover.png</file>
+    <file>imgs/confirm_pressed.png</file>
+    <file>imgs/openFile.png</file>
+    <file>imgs/openFile_hover.png</file>
+    <file>imgs/openFile_pressed.png</file>
+    <file>imgs/delete.png</file>
+    <file>imgs/edit.png</file>
+    <file>imgs/edit_disabled.png</file>
+    <file>imgs/edit_hover.png</file>
+    <file>imgs/edit_pressed.png</file>
+    <file>imgs/add pressed.png</file>
+    <file>imgs/add.png</file>
+    <file>imgs/add_disable.png</file>
+    <file>imgs/add_hover.png</file>
+    <file>imgs/minus.png</file>
+    <file>imgs/plus.png</file>
+    <file>imgs/arrow.png</file>
+    <file>imgs/machine.png</file>
+    <file>imgs/user.png</file>
+    <file>imgs/error.png</file>
+    <file>imgs/expandStringLabel.png</file>
+    <file>imgs/readOnlyStringLabel.png</file>
+    <file>imgs/stringLabel.png</file>
+    <file>imgs/expand.png</file>
+    <file>imgs/expand_hover.png</file>
+    <file>imgs/expand_pressed.png</file>
+    <file>imgs/narrow.png</file>
+    <file>imgs/narrow_hover.png</file>
+    <file>imgs/narrow_pressed.png</file>
+  </qresource>
+</RCC>

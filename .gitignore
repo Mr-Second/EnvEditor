@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Designer Files
+*.ui
+*.qrc
+
+
+*.reg
+
+imgs/
+
+.idea

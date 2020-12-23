@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/imgs/icon.png</normaloff>:/imgs/icon.png</iconset>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">* {
+	font: 8pt &quot;Source Code Pro for Powerline&quot;;
+}
+#frame {
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 rgba(91, 77, 163, 255), stop:1 rgba(112, 53, 160, 255));
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+#closeBtn {
+	border-radius: 10px;
+	background-color: rgba(255, 0, 0, 255);
+}
+
+#closeBtn:hover {
+	background-color: rgba(255, 0, 0, 150);
+}
+
+#closeBtn:pressed {
+		background-color: rgba(255, 0, 0, 80);
+}
+
+#maxBtn{
+	border-radius: 10px;
+	background-color: rgba(231, 231, 115, 255);
+}
+
+#maxBtn:hover{
+	background-color: rgba(231, 231, 115, 150);
+}
+
+#maxBtn:pressed{
+	background-color: rgba(231, 231, 115, 80);
+}
+
+#minBtn {
+	border-radius: 10px;
+	background-color:  rgba(77, 167, 219, 255);
+}
+
+#minBtn:hover {
+	background-color:  rgba(77, 167, 219, 150);
+}
+
+#minBtn:pressed {
+	background-color:  rgba(77, 167, 219, 80);
+}
+
+QTreeWidget {
+		background-color: rgba(255, 255, 255, 0);
+}
+QTreeView::branch:has-children:!has-siblings:closed,QTreeView::branch:closed:has-children:has-siblings{
+	border-image: none;
+ 	image: url(:/imgs/plus.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,QTreeView::branch:open:has-children:has-siblings{
+	border-image: none;
+	image: url(:/imgs/minus.png);
+}
+
+#expandBtn {
+	border-radius: 20px;
+	border-width: 6px;
+	border-image: url(:/imgs/expand.png);
+	background-color: rgba(170, 85, 255, 50);
+}
+#expandBtn:hover {
+	background-color: rgba(170, 85, 255, 100);
+	border-image: url(:/imgs/expand_hover.png);
+}
+
+#expandBtn:pressed {
+	background-color: rgba(170, 85, 255, 200);
+	border-image: url(:/imgs/expand_pressed.png);
+}
+
+#narrowBtn {
+	border-radius: 20px;
+	border-width: 6px;
+	border-image: url(:/imgs/narrow.png);
+	background-color: rgba(170, 85, 255, 50);
+}
+
+#narrowBtn:hover {
+	border-image: url(:/imgs/narrow_hover.png);
+	background-color: rgba(170, 85, 255, 100);
+}
+
+#narrowBtn:pressed {
+	border-image: url(:/imgs/narrow_pressed.png);
+	background-color: rgba(170, 85, 255, 200);
+}
+
+
+QTabBar::tab {
+	height:20px;
+	border: 1px solid black;
+	background-color: rgba(255, 255, 255, 0);
+	padding: 2px;
+}
+
+QTabBar::tab:selected {
+	background-color: rgba(255, 255, 255, 200);
+	
+}
+QTabBar::tab:!selected{
+    background-color: rgba(255, 255, 255, 100);	
+}
+
+QTabWidget::pane {
+	border: 1px solid black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#detailsTab {
+	border: none;		
+	gridline-color:rgb(207, 207, 207);
+	font: 10pt &quot;华文楷体&quot;;
+	color: rgb(216, 216, 216);
+}
+
+#hintTab {
+	border: none;
+	color: rgb(216, 216, 216);
+}
+
+#hintTab::item {
+	border-bottom: 1px solid rgba(207, 207, 207, 100)
+}
+
+#machineLabel {
+	color: rgb(216, 216, 216);
+	font-size: 12px;
+}
+
+#userLabel {
+	color: rgb(216, 216, 216);
+	font-size: 12px;
+}
+
+#computerNameLabel {
+	color: rgb(216, 216, 216);
+}
+
+#userNameLabel {
+	color: rgb(216, 216, 216);
+}
+
+#addBtn {
+	border-image: url(:/imgs/add.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+#addBtn:hover {
+	border-image: url(:/imgs/add_hover.png);
+}
+#addBtn:pressed {
+	border-image: url(:/imgs/add pressed.png);
+}
+#addBtn:disabled {
+	border-image: url(:/imgs/add_disable.png);
+}
+
+#delBtn {
+	border-image: url(:/imgs/delete.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#delBtn:hover {
+	border-image: url(:/imgs/delete_hover.png);
+}
+#delBtn:pressed {
+	border-image: url(:/imgs/delete_pressed.png);
+}
+#delBtn:disabled {
+	border-image: url(:/imgs/delete_disabled.png);
+}
+
+
+#modifyBtn {
+	border-image: url(:/imgs/edit.png);
+	background-color: rgba(255, 255, 255, 0);
+}
+#modifyBtn:hover {
+	border-image: url(:/imgs/edit_hover.png);
+}
+#modifyBtn:pressed {
+	border-image: url(:/imgs/edit_pressed.png);
+}
+#modifyBtn:disabled {
+	border-image: url(:/imgs/edit_disabled.png);
+}
+#exportBtn {
+	border-image: url(:/imgs/export.png);
+}
+#exportBtn:hover {
+	border-image: url(:/imgs/export_hover.png);
+}
+#exportBtn:pressed {
+	border-image: url(:/imgs/export_pressed.png);
+}
+#infoBtn {
+	border-image: url(:/imgs/info.png);
+}
+#infoBtn:hover {
+	border-image: url(:/imgs/info_hover.png);
+}
+#infoBtn:pressed {
+	border-image: url(:/imgs/info_pressed.png);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,1,10,4">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="rightMargin">
+           <number>2</number>
+          </property>
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="minBtn">
+              <property name="minimumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="maxBtn">
+              <property name="minimumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="closeBtn">
+              <property name="minimumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,1">
+          <property name="spacing">
+           <number>2</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="addBtn">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Create&lt;/span&gt; an environment variable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="delBtn">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Delete&lt;/span&gt; the environment variable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="modifyBtn">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Edit&lt;/span&gt; the environment variable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="exportBtn">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Export&lt;/span&gt; the current environment variable&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="infoBtn">
+            <property name="minimumSize">
+             <size>
+              <width>33</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>36</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Get Information&lt;/span&gt; of the software&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="computerNameLabel">
+            <property name="text">
+             <string>ComputeName</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="computerBox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="userNameLabel">
+            <property name="text">
+             <string>User</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="userBox"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="machineLabel">
+              <property name="text">
+               <string>Machine Environment Variables</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="machineTree">
+              <property name="focusPolicy">
+               <enum>Qt::ClickFocus</enum>
+              </property>
+              <property name="horizontalScrollMode">
+               <enum>QAbstractItemView::ScrollPerItem</enum>
+              </property>
+              <property name="animated">
+               <bool>true</bool>
+              </property>
+              <attribute name="headerVisible">
+               <bool>true</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string notr="true">Machine</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/machine.png</normaloff>:/imgs/machine.png</iconset>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="3,1,3,1,3">
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="expandBtn">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;expand&lt;/span&gt; all environment variables&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="narrowBtn">
+              <property name="minimumSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;fold&lt;/span&gt; all environment variables&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="userLabel">
+              <property name="text">
+               <string>User Environment Variables</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="userTree">
+              <property name="horizontalScrollMode">
+               <enum>QAbstractItemView::ScrollPerItem</enum>
+              </property>
+              <property name="animated">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string notr="true">User</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/user.png</normaloff>:/imgs/user.png</iconset>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">background: rgba(255, 255, 255, 0);</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="Details">
+           <attribute name="title">
+            <string>Details</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTableWidget" name="detailsTab">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="autoScroll">
+               <bool>true</bool>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+              <property name="showGrid">
+               <bool>true</bool>
+              </property>
+              <property name="gridStyle">
+               <enum>Qt::SolidLine</enum>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderCascadingSectionResizes">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="horizontalHeaderStretchLastSection">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderHighlightSections">
+               <bool>false</bool>
+              </attribute>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string/>
+               </property>
+              </row>
+              <column>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string/>
+               </property>
+              </column>
+              <item row="0" column="0">
+               <property name="text">
+                <string>变量名</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="1" column="0">
+               <property name="text">
+                <string>类型</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="1" column="1">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
+              <item row="2" column="0">
+               <property name="text">
+                <string>源值</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+              <item row="2" column="1">
+               <property name="text">
+                <string/>
+               </property>
+              </item>
+              <item row="3" column="0">
+               <property name="text">
+                <string>转义值</string>
+               </property>
+               <property name="textAlignment">
+                <set>AlignCenter</set>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="Hint">
+           <attribute name="title">
+            <string>Hint</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <property name="spacing">
+             <number>1</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QListWidget" name="hintTab">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+              <item>
+               <property name="text">
+                <string>env variable is a text-string</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/stringLabel.png</normaloff>:/imgs/stringLabel.png</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>env variable is a compressed string</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/expandStringLabel.png</normaloff>:/imgs/expandStringLabel.png</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>env variable is a read-only string</string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/readOnlyStringLabel.png</normaloff>:/imgs/readOnlyStringLabel.png</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>there is something wrong in env variable's value </string>
+               </property>
+               <property name="icon">
+                <iconset resource="icons.qrc">
+                 <normaloff>:/imgs/error.png</normaloff>:/imgs/error.png</iconset>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>expandBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>userTree</receiver>
+   <slot>expandAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>narrowBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>machineTree</receiver>
+   <slot>collapseAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>394</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>57</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>narrowBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>userTree</receiver>
+   <slot>collapseAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
+     <y>343</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>522</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>784</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>734</x>
+     <y>17</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>384</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>expandBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>machineTree</receiver>
+   <slot>expandAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>maxBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>setWindowsState()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>761</x>
+     <y>10</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>626</x>
+     <y>-7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>machineTree</sender>
+   <signal>itemClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>Form</receiver>
+   <slot>receiveActivatedSignal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>167</x>
+     <y>-13</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>userTree</sender>
+   <signal>itemClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>Form</receiver>
+   <slot>receiveActivatedSignal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>545</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>-10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>createNewItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>-2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>deleteItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>132</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>226</x>
+     <y>-12</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>modifyBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>modifyItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>560</x>
+     <y>595</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>exportBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>exportRegistryTable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showInformation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>799</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setWindowsState()</slot>
+  <slot>receiveActivatedSignal()</slot>
+  <slot>createNewItem()</slot>
+  <slot>deleteItem()</slot>
+  <slot>modifyItem()</slot>
+  <slot>exportRegistryTable()</slot>
+  <slot>showInformation()</slot>
+ </slots>
+</ui>
